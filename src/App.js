@@ -1,4 +1,7 @@
-import logo from './logo.svg';
+import AuthPage from './AuthPage';
+import UpdatePage from './UpdatePage';
+import ListPage from './ListPage';
+import CreatePage from './CreatePage';
 import './App.css';
 
 function App() {
