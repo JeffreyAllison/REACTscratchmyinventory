@@ -8,6 +8,7 @@ import CreatePage from './CreatePage';
 import './App.css';
 
 export default function App() {
+  // eslint-disable-next-line no-unused-vars
   const [email, setEmail] = useState('');
   const [token, setToken] = useState('');
 
@@ -62,7 +63,26 @@ export default function App() {
             </ul>
           </nav>
         </header>
-        <main className="main"></main>
+        <main className="main">
+          <Switch>
+            <Route exact path="/">
+              {token ? (
+                <Redirect to="/albums" />
+              ) : (
+                <AuthPage setEmail={setEmail} setToken={setToken} />
+              )}
+            </Route>
+            <Route exact path="/albums">
+              {token ? <ListPage /> : <Redirect to="/" />}
+            </Route>
+            <Route exact path="/albums/:id">
+              {token ? <UpdatePage /> : <Redirect to="/" />}
+            </Route>
+            <Route exact path="/create">
+              {token ? <CreatePage /> : <Redirect to="/" />}
+            </Route>
+          </Switch>
+        </main>
       </div>
     </Router>
   );
