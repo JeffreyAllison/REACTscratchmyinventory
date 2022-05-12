@@ -27,21 +27,43 @@ export default function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="header">
+          <nav>
+            <ul>
+              <li>
+                <NavLink
+                  to="/"
+                  className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/create"
+                  className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
+                >
+                  Create
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/albums"
+                  className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
+                >
+                  List
+                </NavLink>
+              </li>
+              <li>
+                <button onClick={handleLogout}>Log0ut</button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main className="main"></main>
+      </div>
+    </Router>
   );
 }
