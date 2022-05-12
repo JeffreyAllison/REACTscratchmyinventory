@@ -7,7 +7,25 @@ import ListPage from './ListPage';
 import CreatePage from './CreatePage';
 import './App.css';
 
-function App() {
+export default function App() {
+  const [email, setEmail] = useState('');
+  const [token, setToken] = useState('');
+
+  useEffect(() => {
+    const user = getUser();
+
+    if (user) {
+      setToken(user.access_token);
+      setEmail(user.user.email);
+    }
+  }, []);
+
+  async function handleLogout() {
+    await logout();
+    setEmail('');
+    setToken('');
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -27,5 +45,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
