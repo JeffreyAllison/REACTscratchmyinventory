@@ -46,7 +46,7 @@ export default function App() {
                   to="/create"
                   className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
                 >
-                  Create
+                  Create Album Inventory
                 </NavLink>
               </li>
               <li>
@@ -54,7 +54,7 @@ export default function App() {
                   to="/albums"
                   className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
                 >
-                  List
+                  View Album List
                 </NavLink>
               </li>
               <li>
@@ -73,6 +73,7 @@ export default function App() {
               )}
             </Route>
             <Route exact path="/albums">
+              Click an Album to update information
               {token ? <ListPage /> : <Redirect to="/" />}
             </Route>
             <Route exact path="/albums/:id">
