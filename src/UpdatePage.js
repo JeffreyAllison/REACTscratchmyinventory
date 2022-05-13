@@ -32,7 +32,9 @@ export default function UpdatePage() {
   }
   return (
     <div>
-      <h2>Update an Album for the Inventory</h2>
+      <h2 className="update-heading">
+        <i>Update an Album for the Inventory</i>
+      </h2>
       <form className="create-album-form" onSubmit={handleUpdateAlbum}>
         <label>
           Album Title

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: url(./inventory.jpeg);
 }
 
 .App-logo {
@@ -11,17 +12,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -45,14 +35,19 @@
   align-items: center;
 }
 
-li {
+.links {
   padding: 3px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(222, 222, 222);
 }
 
 .header {
   align-items: center;
   justify-content: center;
-  margin-right: 40px;
+  margin-left: 450px;
+  margin-right: 450px;
+  border: solid black 2px;
 }
 
 .albums-list {
@@ -60,8 +55,41 @@ li {
   margin-left: 450px;
   margin-right: 450px;
   margin-top: 5px;
+  background-color: rgb(222, 222, 222);
 }
 
 .album {
   border: solid 2px black;
+}
+
+.heading {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 15px;
+  background-color: rgb(222, 222, 222);
+}
+
+.create-album-form {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 5px;
+  background-color: rgb(222, 222, 222);
+}
+
+.form-heading {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 15px;
+  background-color: rgb(222, 222, 222);
+}
+
+.update-heading {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 15px;
+  background-color: rgb(222, 222, 222);
 }

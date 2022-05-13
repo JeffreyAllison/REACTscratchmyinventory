@@ -23,7 +23,9 @@ export default function CreatePage() {
   }
   return (
     <div>
-      <h2>Create an Album for the Inventory</h2>
+      <h2 className="form-heading">
+        <i>Create an Album for the Inventory</i>
+      </h2>
       <form className="create-album-form" onSubmit={handleSubmitAlbum}>
         <label>
           Album Title

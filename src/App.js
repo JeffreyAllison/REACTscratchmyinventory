@@ -32,35 +32,35 @@ export default function App() {
       <div className="App">
         <header className="header">
           <nav>
-            <ul>
-              <li>
+            <div className="links">
+              <p>
                 <NavLink
                   to="/"
                   className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
                 >
                   Home
                 </NavLink>
-              </li>
-              <li>
+              </p>
+              <p>
                 <NavLink
                   to="/create"
                   className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
                 >
                   Create Album Inventory
                 </NavLink>
-              </li>
-              <li>
+              </p>
+              <p>
                 <NavLink
                   to="/albums"
                   className={(isActive) => ('nav-link' + !isActive ? ' unselected ' : '')}
                 >
                   View Album List
                 </NavLink>
-              </li>
-              <li>
+              </p>
+              <p>
                 <button onClick={handleLogout}>Log0ut</button>
-              </li>
-            </ul>
+              </p>
+            </div>
           </nav>
         </header>
         <main className="main">
@@ -73,7 +73,11 @@ export default function App() {
               )}
             </Route>
             <Route exact path="/albums">
-              Click an Album to update information
+              <div className="heading">
+                <i>
+                  <strong>Click an Album to update</strong>
+                </i>
+              </div>
               {token ? <ListPage /> : <Redirect to="/" />}
             </Route>
             <Route exact path="/albums/:id">
