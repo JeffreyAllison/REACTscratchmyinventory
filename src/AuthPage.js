@@ -33,5 +33,33 @@ export default function AuthPage({ setEMail, setToken }) {
     setToken(access_token);
   }
 
-  return <div>AuthPage</div>;
+  return (
+    <div className="auth">
+      <h1>REACT Album Inventory</h1>
+      <form onSubmit={handleSignUp}>
+        <h3>Sign Up</h3>
+        <label>
+          email
+          <input onChange={(e) => setSignUpEmail(e.target.value)} />
+        </label>
+        <label>
+          password
+          <input onChange={(e) => setSignUpPassword(e.target.value)} />
+        </label>
+        <button>Sign Up</button>
+      </form>
+      <form onSubmit={handleSignIn}>
+        <h3>Sign In</h3>
+        <label>
+          email
+          <input onChange={(e) => setSignInEmail(e.target.value)} />
+        </label>
+        <label>
+          password
+          <input onChange={(e) => setSignInPassword(e.target.value)} />
+        </label>
+        <button>Sign In</button>
+      </form>
+    </div>
+  );
 }
