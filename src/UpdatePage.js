@@ -3,7 +3,7 @@ import { getAlbumById, updateAlbum } from './services/fetch-utils';
 import { useHistory, useParams } from 'react-router-dom';
 
 export default function UpdatePage() {
-  const push = useHistory();
+  const { push } = useHistory();
   const { id } = useParams();
   const [formAlbum, setFormAlbum] = useState({
     title: '',
@@ -28,7 +28,7 @@ export default function UpdatePage() {
 
     await updateAlbum(id, formAlbum);
 
-    history.push('/albums');
+    push('/albums');
   }
   return (
     <div>
