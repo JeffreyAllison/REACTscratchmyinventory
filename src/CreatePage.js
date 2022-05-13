@@ -22,11 +22,12 @@ export default function CreatePage() {
     history.push('/albums');
   }
   return (
-    <div className="create-album-form">
-      <form onSubmit={handleSubmitAlbum}>
-        <h2>Create an Album for the Inventory</h2>
+    <div>
+      <h2>Create an Album for the Inventory</h2>
+      <form className="create-album-form" onSubmit={handleSubmitAlbum}>
         <label>
           Album Title
+          <br></br>
           <input
             value={formAlbum.title}
             type="text"
@@ -34,8 +35,10 @@ export default function CreatePage() {
             name="title"
           />
         </label>
+        <br></br>
         <label>
           Artist
+          <br></br>
           <input
             value={formAlbum.artist}
             type="text"
@@ -43,8 +46,10 @@ export default function CreatePage() {
             name="artist"
           />
         </label>
+        <br></br>
         <label>
           Release Date
+          <br></br>
           <input
             value={formAlbum.released}
             type="text"
@@ -52,8 +57,10 @@ export default function CreatePage() {
             name="released"
           />
         </label>
+        <br></br>
         <label>
-          Run Time
+          Run Time in minutes
+          <br></br>
           <input
             value={formAlbum.minutes}
             type="text"
@@ -61,8 +68,10 @@ export default function CreatePage() {
             name="minutes"
           />
         </label>
+        <br></br>
         <label>
           # of Tracks
+          <br></br>
           <input
             value={formAlbum.tracks}
             type="text"
@@ -70,8 +79,10 @@ export default function CreatePage() {
             name="tracks"
           />
         </label>
+        <br></br>
         <label>
           Produced by
+          <br></br>
           <input
             value={formAlbum.producer}
             type="text"
@@ -79,8 +90,10 @@ export default function CreatePage() {
             name="producer"
           />
         </label>
+        <br></br>
         <label>
           genres
+          <br></br>
           <input
             value={formAlbum.genres}
             type="text"
@@ -88,6 +101,8 @@ export default function CreatePage() {
             name="genres"
           />
         </label>
+        <br></br>
+        <br></br>
         <button>Add Album to Inventory</button>
       </form>
     </div>

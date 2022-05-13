@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.create-album-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  padding: 3px;
+}
+
+.header {
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.albums-list {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 5px;
+}
