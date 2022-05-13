@@ -8,8 +8,8 @@ export default function CreatePage() {
     title: '',
     artist: '',
     released: '',
-    minutes: '',
-    tracks: '',
+    minutes: 0,
+    tracks: 0,
     producer: '',
     genres: '',
   });

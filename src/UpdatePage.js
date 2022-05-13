@@ -2,29 +2,38 @@ import React, { useState, useEffect } from 'react';
 import { getAlbumById, updateAlbum } from './services/fetch-utils';
 import { useHistory, useParams } from 'react-router-dom';
 
-export default function CreatePage() {
-  const history = useHistory();
+export default function UpdatePage() {
+  const push = useHistory();
+  const { id } = useParams();
   const [formAlbum, setFormAlbum] = useState({
     title: '',
     artist: '',
     released: '',
-    minutes: '',
-    tracks: '',
+    minutes: 0,
+    tracks: 0,
     producer: '',
     genres: '',
   });
 
-  async function handleSubmitAlbum(e) {
+  useEffect(() => {
+    async function load() {
+      const album = await getAlbumById(id);
+      setFormAlbum(album);
+    }
+    load();
+  }, [id]);
+
+  async function handleUpdateAlbum(e) {
     e.preventDefault();
 
-    await createAlbum(formAlbum);
+    await updateAlbum(id, formAlbum);
 
     history.push('/albums');
   }
   return (
     <div>
-      <h2>Create an Album for the Inventory</h2>
-      <form className="create-album-form" onSubmit={handleSubmitAlbum}>
+      <h2>Update an Album for the Inventory</h2>
+      <form className="create-album-form" onSubmit={handleUpdateAlbum}>
         <label>
           Album Title
           <br></br>
@@ -103,7 +112,7 @@ export default function CreatePage() {
         </label>
         <br></br>
         <br></br>
-        <button>Add Album to Inventory</button>
+        <button>Update Album data</button>
       </form>
     </div>
   );
