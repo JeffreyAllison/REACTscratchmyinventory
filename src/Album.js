@@ -9,43 +9,50 @@ export default function Album({
         <p>
           <i>
             <strong>Album Title:</strong>
-          </i>{' '}
+          </i>
+          <br></br>
           {title}
         </p>
         <p>
           <i>
             <strong>Artist:</strong>
           </i>
+          <br></br>
           {artist}
         </p>
         <p>
           <i>
             <strong>Release Date:</strong>
-          </i>{' '}
+          </i>
+          <br></br>
           {released}
         </p>
         <p>
           <i>
             <strong>Run Time in Minutes:</strong>
-          </i>{' '}
+          </i>
+          <br></br>
           {minutes}
         </p>
         <p>
           <i>
             <strong>Number of Tracks:</strong>
-          </i>{' '}
+          </i>
+          <br></br>
           {tracks}
         </p>
         <p>
           <i>
             <strong>Produced by:</strong>
-          </i>{' '}
+          </i>
+          <br></br>
           {producer}
         </p>
         <p>
           <i>
             <strong>Genres:</strong>
-          </i>{' '}
+          </i>
+          <br></br>
           {genres}
         </p>
       </div>
