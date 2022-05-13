@@ -14,5 +14,11 @@ export default function ListPage() {
     fetch();
   }, []);
 
-  return <div>ListPage</div>;
+  return (
+    <div className="albums-list">
+      {albums.map((album) => (
+        <Album key={album.id} album={album} />
+      ))}
+    </div>
+  );
 }
