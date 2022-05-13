@@ -63,7 +63,7 @@ export default function CreatePage() {
           <br></br>
           <input
             value={formAlbum.minutes}
-            type="text"
+            type="number"
             onChange={(e) => setFormAlbum({ ...formAlbum, minutes: e.target.value })}
             name="minutes"
           />
@@ -74,7 +74,7 @@ export default function CreatePage() {
           <br></br>
           <input
             value={formAlbum.tracks}
-            type="text"
+            type="number"
             onChange={(e) => setFormAlbum({ ...formAlbum, tracks: e.target.value })}
             name="tracks"
           />
