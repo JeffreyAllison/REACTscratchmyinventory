@@ -7,26 +7,46 @@ export default function Album({
     <Link to={`/albums/${id}`}>
       <div className="album">
         <p>
-          <i>Album Title:</i> {title}
+          <i>
+            <strong>Album Title:</strong>
+          </i>{' '}
+          {title}
         </p>
         <p>
-          <i>Artist:</i>
+          <i>
+            <strong>Artist:</strong>
+          </i>
           {artist}
         </p>
         <p>
-          <i>Release Date:</i> {released}
+          <i>
+            <strong>Release Date:</strong>
+          </i>{' '}
+          {released}
         </p>
         <p>
-          <i>Run Time in Minutes:</i> {minutes}
+          <i>
+            <strong>Run Time in Minutes:</strong>
+          </i>{' '}
+          {minutes}
         </p>
         <p>
-          <i>Number of Tracks: </i> {tracks}
+          <i>
+            <strong>Number of Tracks:</strong>
+          </i>{' '}
+          {tracks}
         </p>
         <p>
-          <i>Produced by:</i> {producer}
+          <i>
+            <strong>Produced by:</strong>
+          </i>{' '}
+          {producer}
         </p>
         <p>
-          <i>Genres:</i> {genres}
+          <i>
+            <strong>Genres:</strong>
+          </i>{' '}
+          {genres}
         </p>
       </div>
     </Link>
