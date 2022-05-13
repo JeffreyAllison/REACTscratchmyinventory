@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { signIn, signUp, getUser } from './services/fetch-utils';
 
-export default function AuthPage({ setEMail, setToken }) {
+export default function AuthPage({ setEmail, setToken }) {
   const [signUpEmail, setSignUpEmail] = useState('');
   const [signInEmail, setSignInEmail] = useState('');
   const [signUpPassword, setSignUpPassword] = useState('');
@@ -16,7 +16,7 @@ export default function AuthPage({ setEMail, setToken }) {
       access_token,
       user: { email },
     } = getUser();
-    setEMail(email);
+    setEmail(email);
     setToken(access_token);
   }
 
@@ -29,7 +29,7 @@ export default function AuthPage({ setEMail, setToken }) {
       access_token,
       user: { email },
     } = getUser();
-    setEMail(email);
+    setEmail(email);
     setToken(access_token);
   }
 
