@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { signIn, signUp, getUser } from './services/fetch-utils';
+import './App.css';
 
 export default function AuthPage({ setEmail, setToken }) {
   const [signUpEmail, setSignUpEmail] = useState('');
@@ -34,9 +35,9 @@ export default function AuthPage({ setEmail, setToken }) {
   }
 
   return (
-    <div className="auth">
-      <h1>REACT Album Inventory</h1>
-      <form onSubmit={handleSignUp}>
+    <div>
+      <h1 className="heading">REACT Album Inventory</h1>
+      <form className="form-heading" onSubmit={handleSignUp}>
         <h3>Sign Up</h3>
         <label>
           email
@@ -48,7 +49,7 @@ export default function AuthPage({ setEmail, setToken }) {
         </label>
         <button>Sign Up</button>
       </form>
-      <form onSubmit={handleSignIn}>
+      <form className="form-heading" onSubmit={handleSignIn}>
         <h3>Sign In</h3>
         <label>
           email
