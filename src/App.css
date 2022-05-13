@@ -1,5 +1,9 @@
+body,
+html,
+#root,
 .App {
   text-align: center;
+  background-color: rgb(117, 104, 202);
 }
 
 .App-logo {
@@ -13,19 +17,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
-  color: #61dafb;
+  color: #3ce92c;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +28,80 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.create-album-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  padding: 3px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(222, 222, 222);
+}
+
+.header {
+  align-items: center;
+  justify-content: center;
+  margin-left: 450px;
+  margin-right: 450px;
+  border: solid black 2px;
+}
+
+.albums-list {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 5px;
+  background-color: rgb(222, 222, 222);
+}
+
+.album {
+  border: solid 2px black;
+}
+
+.heading {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 15px;
+  background-color: rgb(222, 222, 222);
+}
+
+.create-album-form {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 5px;
+  background-color: rgb(222, 222, 222);
+}
+
+.form-heading {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 15px;
+  background-color: rgb(222, 222, 222);
+  padding: 5px;
+}
+
+.update-heading {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 15px;
+  background-color: rgb(222, 222, 222);
+}
+
+.auth {
+  border: solid 2px black;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 5px;
+  background-color: rgb(222, 222, 222);
 }
