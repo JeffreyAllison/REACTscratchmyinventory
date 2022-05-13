@@ -26,6 +26,7 @@ export default function CreatePage() {
       <form onSubmit={handleSubmitAlbum}>
         <h2>Create an Album for the Inventory</h2>
         <label>
+          Album Title
           <input
             value={formAlbum.title}
             type="text"
@@ -34,6 +35,7 @@ export default function CreatePage() {
           />
         </label>
         <label>
+          Artist
           <input
             value={formAlbum.artist}
             type="text"
@@ -42,6 +44,7 @@ export default function CreatePage() {
           />
         </label>
         <label>
+          Release Date
           <input
             value={formAlbum.released}
             type="text"
@@ -50,6 +53,7 @@ export default function CreatePage() {
           />
         </label>
         <label>
+          Run Time
           <input
             value={formAlbum.minutes}
             type="text"
@@ -58,6 +62,7 @@ export default function CreatePage() {
           />
         </label>
         <label>
+          # of Tracks
           <input
             value={formAlbum.tracks}
             type="text"
@@ -66,6 +71,7 @@ export default function CreatePage() {
           />
         </label>
         <label>
+          Produced by
           <input
             value={formAlbum.producer}
             type="text"
@@ -74,6 +80,7 @@ export default function CreatePage() {
           />
         </label>
         <label>
+          genres
           <input
             value={formAlbum.genres}
             type="text"
